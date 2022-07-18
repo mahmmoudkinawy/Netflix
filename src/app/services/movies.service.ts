@@ -13,9 +13,9 @@ export class MoviesService {
 
   constructor(private http: HttpClient) {}
 
-  getMovies(): Observable<Movie[]> {
+  getMovies(type: string = 'upcoming'): Observable<Movie[]> {
     return this.http
-      .get<MovieDto>(`${this.baseUrl}/movie/upcoming`, {
+      .get<MovieDto>(`${this.baseUrl}/movie/${type}`, {
         params: {
           api_key: '80f79dcc24fce9ca938dc42756edb324',
         },

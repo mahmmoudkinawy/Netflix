@@ -1,0 +1,12 @@
+<ng-container *ngIf="itemData">
+    <a class="item">
+        <div class="item-rating">
+            <i class="app-icon">star</i>
+            <span>{{itemData.vote_average}}</span>/10
+        </div>
+        <div class="item-image">
+            <img [src]="'https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg'" alt="">
+        </div>
+        <div class="item-title">{{itemData.title}}</div>
+    </a>
+</ng-container>

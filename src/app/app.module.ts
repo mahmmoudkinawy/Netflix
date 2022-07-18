@@ -13,6 +13,8 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { LengthPipe } from './shared/pipes/length.pipe';
+import { ItemComponent } from './components/item/item.component';
+import { ItemsBannerComponent } from './components/items-banner/items-banner.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { LengthPipe } from './shared/pipes/length.pipe';
     NotFoundComponent,
     SliderComponent,
     LengthPipe,
+    ItemComponent,
+    ItemsBannerComponent,
   ],
   imports: [
     BrowserModule,
