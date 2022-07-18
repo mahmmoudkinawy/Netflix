@@ -8,6 +8,7 @@ import { Movie } from 'src/app/models/movie';
 })
 export class ItemsBannerComponent implements OnInit {
   @Input() items: Movie[] = [];
+  @Input() title = '';
 
   constructor() {}
 
