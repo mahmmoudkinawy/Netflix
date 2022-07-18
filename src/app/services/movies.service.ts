@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { Observable, of, switchMap } from 'rxjs';
 
 import { environment } from 'src/environments/environment';
-import { Movie } from '../models/movie';
+import { Movie, MovieDto } from '../models/movie';
 
 @Injectable({
   providedIn: 'root',
@@ -15,14 +15,14 @@ export class MoviesService {
 
   getMovies(): Observable<Movie[]> {
     return this.http
-      .get<Movie[]>(`${this.baseUrl}/movie/upcoming`, {
+      .get<MovieDto>(`${this.baseUrl}/movie/upcoming`, {
         params: {
           api_key: '80f79dcc24fce9ca938dc42756edb324',
         },
       })
       .pipe(
-        map((res: any) => {
-          return res.results;
+        switchMap((res) => {
+          return of(res.results);
         })
       );
   }
