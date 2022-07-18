@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { LengthPipe } from './shared/pipes/length.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SliderComponent } from './components/slider/slider.component';
     MoviesComponent,
     NotFoundComponent,
     SliderComponent,
+    LengthPipe,
   ],
   imports: [
     BrowserModule,
