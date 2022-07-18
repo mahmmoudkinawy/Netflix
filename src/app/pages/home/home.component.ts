@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/models/movie';
 import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
@@ -7,13 +8,13 @@ import { MoviesService } from 'src/app/services/movies.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  movies: any = [];
+  movies: Movie[] = [];
 
   constructor(private moviesService: MoviesService) {}
 
   ngOnInit(): void {
     this.moviesService
       .getMovies()
-      .subscribe((response: any) => (this.movies = response.results));
+      .subscribe((response) => (this.movies = response));
   }
 }
