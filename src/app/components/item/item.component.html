@@ -5,7 +5,7 @@
             <span>{{itemData.vote_average}}</span>/10
         </div>
         <div class="item-image">
-            <img [src]="'https://image.tmdb.org/t/p/w500' + itemData.poster_path" alt="">
+            <img [src]="imagesSizes.small.concat(itemData.poster_path)" alt="">
         </div>
         <div class="item-title">{{itemData.title}}</div>
     </a>
