@@ -16,6 +16,8 @@ import { LengthPipe } from './shared/pipes/length.pipe';
 import { ItemComponent } from './components/item/item.component';
 import { ItemsBannerComponent } from './components/items-banner/items-banner.component';
 
+import { PaginatorModule } from 'primeng/paginator';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,7 @@ import { ItemsBannerComponent } from './components/items-banner/items-banner.com
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    PaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

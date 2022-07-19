@@ -29,4 +29,19 @@ export class MoviesService {
         })
       );
   }
+
+  getPaginatedMovies(page: number): Observable<Movie[]> {
+    return this.http
+      .get<MovieDto>(`${this.baseUrl}/movie/popular?`, {
+        params: {
+          page: page,
+          api_key: '80f79dcc24fce9ca938dc42756edb324',
+        },
+      })
+      .pipe(
+        switchMap((res) => {
+          return of(res.results);
+        })
+      );
+  }
 }
