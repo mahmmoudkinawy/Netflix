@@ -9,7 +9,8 @@ import { Movie, MovieDto } from '../models/movie';
   providedIn: 'root',
 })
 export class MoviesService {
-  private baseUrl = environment.apiUrl;
+  private readonly baseUrl = environment.apiUrl;
+  private readonly apiKey = environment.apiKey;
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +21,7 @@ export class MoviesService {
     return this.http
       .get<MovieDto>(`${this.baseUrl}/movie/${type}`, {
         params: {
-          api_key: '80f79dcc24fce9ca938dc42756edb324',
+          api_key: this.apiKey,
         },
       })
       .pipe(
@@ -30,12 +31,20 @@ export class MoviesService {
       );
   }
 
+  getMovie(id: string): Observable<Movie> {
+    return this.http.get<Movie>(`${this.baseUrl}/movie/${id}`, {
+      params: {
+        api_key: this.apiKey,
+      },
+    });
+  }
+
   getPaginatedMovies(page: number): Observable<Movie[]> {
     return this.http
       .get<MovieDto>(`${this.baseUrl}/movie/popular?`, {
         params: {
           page: page,
-          api_key: '80f79dcc24fce9ca938dc42756edb324',
+          api_key: this.apiKey,
         },
       })
       .pipe(

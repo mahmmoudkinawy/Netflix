@@ -17,6 +17,7 @@ import { ItemComponent } from './components/item/item.component';
 import { ItemsBannerComponent } from './components/items-banner/items-banner.component';
 
 import { PaginatorModule } from 'primeng/paginator';
+import { MovieComponent } from './pages/movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { PaginatorModule } from 'primeng/paginator';
     LengthPipe,
     ItemComponent,
     ItemsBannerComponent,
+    MovieComponent,
   ],
   imports: [
     BrowserModule,
