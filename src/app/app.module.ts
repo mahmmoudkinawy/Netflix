@@ -16,10 +16,12 @@ import { LengthPipe } from './shared/pipes/length.pipe';
 import { ItemComponent } from './components/item/item.component';
 import { ItemsBannerComponent } from './components/items-banner/items-banner.component';
 import { MovieComponent } from './pages/movie/movie.component';
+import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
 
 import { PaginatorModule } from 'primeng/paginator';
 import { TabViewModule } from 'primeng/tabview';
-import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
+import { ImageModule } from 'primeng/image';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { VideoEmbedComponent } from './components/video-embed/video-embed.compon
     HttpClientModule,
     PaginatorModule,
     TabViewModule,
+    ImageModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
