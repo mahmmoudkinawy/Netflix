@@ -1,4 +1,4 @@
-import { MovieVideo } from './MovieVideo';
+import { MovieVideo } from './movieVideo';
 
 export interface MovieVideoDto {
   id: number;

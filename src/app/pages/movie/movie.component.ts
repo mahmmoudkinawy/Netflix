@@ -5,7 +5,7 @@ import { IMAGES_SIZES } from '../../../app/constants/images-sizes';
 import { Movie } from '../../../app/models/movie';
 import { MovieCredits } from '../../../app/models/movieCredits';
 import { MovieImages } from '../../../app/models/movieImages';
-import { MovieVideo } from '../../../app/models/MovieVideo';
+import { MovieVideo } from '../../../app/models/movieVideo';
 import { MoviesService } from '../../../app/services/movies.service';
 
 @Component({
