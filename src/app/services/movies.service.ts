@@ -3,17 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable, of, switchMap } from 'rxjs';
 
 import { environment } from 'src/environments/environment';
-import { Movie } from '../models/movie';
-import { MovieCredits } from '../models/movieCredits';
-import { MovieDto } from '../models/movieDto';
-import { MovieImages } from '../models/movieImages';
-import { MovieVideoDto } from '../models/movieVideoDto';
-
-// import { Movie } from '../models/movie';
-// import { MovieCredits } from '../models/movieCredits';
-// import { MovieDto } from '../models/movieDto';
-// import { MovieImages } from '../models/movieImages';
-// import { MovieVideoDto } from '../models/movieVideoDto';
+import {
+  Movie,
+  MovieCredits,
+  MovieDto,
+  MovieImages,
+  MovieVideoDto,
+} from '../models/movie';
 
 @Injectable({
   providedIn: 'root',
