@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of, switchMap } from 'rxjs';
 
 import { environment } from 'src/environments/environment';
-import { Movie, MovieDto } from '../models/movie';
+import { Movie, MovieDto, MovieVideoDto } from '../models/movie';
 
 @Injectable({
   providedIn: 'root',
@@ -37,6 +37,20 @@ export class MoviesService {
         api_key: this.apiKey,
       },
     });
+  }
+
+  getMovieVideos(id: string) {
+    return this.http
+      .get<MovieVideoDto>(`${this.baseUrl}/movie/${id}/videos`, {
+        params: {
+          api_key: environment.apiKey,
+        },
+      })
+      .pipe(
+        switchMap((res) => {
+          return of(res.results);
+        })
+      );
   }
 
   getPaginatedMovies(page: number): Observable<Movie[]> {
