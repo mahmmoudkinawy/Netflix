@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { IMAGES_SIZES } from 'src/app/constants/images-sizes';
-import { Movie } from 'src/app/models/movie';
-import { MovieCredits } from 'src/app/models/MovieCredits';
-import { MovieImages } from 'src/app/models/MovieImages';
-import { MovieVideo } from 'src/app/models/MovieVideo';
-import { MoviesService } from 'src/app/services/movies.service';
+import { IMAGES_SIZES } from '../../../app/constants/images-sizes';
+import { Movie } from '../../../app/models/movie';
+import { MovieCredits } from '../../../app/models/movieCredits';
+import { MovieImages } from '../../../app/models/movieImages';
+import { MovieVideo } from '../../../app/models/MovieVideo';
+import { MoviesService } from '../../../app/services/movies.service';
 
 @Component({
   selector: 'app-movie',
