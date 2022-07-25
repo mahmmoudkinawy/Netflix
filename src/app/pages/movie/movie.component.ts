@@ -2,12 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { IMAGES_SIZES } from 'src/app/constants/images-sizes';
-import {
-  Movie,
-  MovieCredits,
-  MovieImages,
-  MovieVideo,
-} from 'src/app/models/movie';
+import { Movie } from 'src/app/models/movie';
+import { MovieCredits } from 'src/app/models/MovieCredits';
+import { MovieImages } from 'src/app/models/MovieImages';
+import { MovieVideo } from 'src/app/models/MovieVideo';
 import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
